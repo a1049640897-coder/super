@@ -1,23 +1,30 @@
+
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <router-view></router-view>
+    <main-tab-bar></main-tab-bar>
   </div>
 </template>
 
-<script lang>
+<script>
+  import TabBar from "components/common/tabbar/TabBar";
+  import TabBarItem from "components/common/tabbar/TabBarItem";
+  import MainTabBar from "components/content/mainTabbar/MainTabBar";
 
-export default {
-
-}
+  export default {
+    name: "App",
+    components: {
+      TabBar,
+      TabBarItem,
+      MainTabBar,
+    },
+    data(){
+      return{
+      }
+    }
+  }
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style>
+  @import "assets/css/base.css";
 </style>
